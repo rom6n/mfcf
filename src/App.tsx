@@ -13,7 +13,8 @@ function App() {
     contract_balance,
     sendIncrement,
     //sendDeposit,
-    WidthdrawCoins,
+    widthdrawCoins,
+    sendDiposit,
   } = useMainContract();
   const { connected } = useTonConnect();
 
@@ -62,7 +63,11 @@ function App() {
               <hr />
 
               <p>Withdraw the TON from contract</p>
-              <button onClick={WidthdrawCoins}>Increment</button>
+              <button onClick={widthdrawCoins}>Withdraw 1 TON</button>
+              <hr />
+              
+              <p>Withdraw the TON from contract</p>
+              <button onClick={sendDiposit}>Diposit 1 TON</button>
               <hr />
             </>
           ) : (
