@@ -57,6 +57,9 @@ export function useMainContract() {
     sendIncrement: async () => {
         return await mainContract?.sendIncrement(sender, toNano("0.05"), 1);
     },
+    WidthdrawCoins: async () => {
+        return await mainContract?.sendWithdrawalRequest(toNano("0.05"), toNano("1"), sender);
+    },
     ...contractData,
   };
 }
