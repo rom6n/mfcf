@@ -52,4 +52,4 @@ export default tseslint.config({
   },
 })
 ```
-test2
+test3
