@@ -90,11 +90,11 @@ function App() {
             href="https://testnet.tonscan.org/address/EQBnodt3mWVa3p3hKj4f_5f6Sx2XSz6ihqrzlCRpsY97SItk"
             target="_blank"
           >
-            explorer
+            See on tonscan
           </a>
           <br />
           <a href="https://github.com/rom6n" target="_blank"> 
-            github
+            GitHub
           </a>
         </div>
       </div>

@@ -18,7 +18,7 @@ export function useMainContract() {
   const [balance, setBalance] = useState<null | number>(0);
   const { sender } = useTonConnect();
     
-    const sleep = (time: number) => new Promise((resolve) => setTimeout(resolve, time));
+  const sleep = (time: number) => new Promise((resolve) => setTimeout(resolve, time));
 
   const mainContract = useAsyncInitialize(async () => {
     if (!client) return;
