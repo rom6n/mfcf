@@ -19,7 +19,7 @@ function App() {
 
   let recent_sender_str = "Загрузка...";
   if (recent_sender) {
-    recent_sender_str = `${recent_sender.toString().slice(0, 5)}.....${recent_sender.toString().slice(43, )}`;
+    recent_sender_str = `${recent_sender.toString().slice(0, 5)}...${recent_sender.toString().slice(43, )}`;
   }
 
   let recent_counter_str = "Загрузка...";
