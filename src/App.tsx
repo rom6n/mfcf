@@ -28,7 +28,7 @@ function App() {
           <div className="Hint">
             {contract_address ?
               `${contract_address.slice(0, 5)}...${contract_address.slice(45, )}` 
-              : "Загрузка..."
+              : "Загрузка..." 
               }
           </div>
           <hr />
@@ -85,7 +85,7 @@ function App() {
               <hr />
             </>
           ) : (
-            <p>Подключите кошелек, что бы увидеть действия</p>
+            <p>Подключите кошелек, что бы увидеть действия c контрактом</p>
           )}
         </div>
         <div>
