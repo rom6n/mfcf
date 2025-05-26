@@ -45,7 +45,7 @@ function App() {
           <b>Баланс контракта:</b> 
           <div className="Hint">
             {contract_balance ?
-              `${contract_balance.toString().slice(0, 5)}.....${contract_balance.toString().slice(43, )}`  
+              `${fromNano(contract_balance)}`  
               : "Загрузка..."
             }
             </div> 
@@ -62,7 +62,7 @@ function App() {
 
           <>
             <b>Значение счетчика:</b>
-            <div>{counter ?? "Loading..."}</div>
+            <div>{counter ?? "Загрузка..."}</div>
           </>
         </div>
         <div>
