@@ -44,8 +44,8 @@ export function useMainContract() {
 
       // ! was missing
       setBalance(contractBalance.number);
-      await sleep(5000);
-      getValue(); // sleep 5 seconds and poll value again
+      await sleep(2500);
+      getValue(); // sleep 2.5 seconds and poll value again
     }
 
     getValue();

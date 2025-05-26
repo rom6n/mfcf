@@ -34,7 +34,7 @@ function App() {
 
   let balance_str = "Загрузка...";
   if (contract_balance) {
-    balance_str = `${contract_balance}`;
+    balance_str = `${fromNano(contract_balance)}`;
   }
 
   let contract_address_str = "Загрузка...";
