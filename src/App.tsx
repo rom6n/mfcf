@@ -81,7 +81,7 @@ function App() {
             explorer
           </a>
           <br />
-          <a href="https://github.com/rom6n" target="_blank">
+          <a href="https://github.com/rom6n" target="_blank"> 
             github
           </a>
         </div>
