@@ -23,18 +23,28 @@ function App() {
 
       <div className="container">
         <div>
-          <h3>Contract Data:</h3>
-          <b>Our contract Address:</b>
-          <div className="Hint">{contract_address?.slice(0, 5)+"..."+contract_address?.slice(20, )}</div>
+          <h3>Данные контракта:</h3>
+          <b>Адресс контракта:</b>
+          <div className="Hint">
+            {contract_address ?
+              `${contract_address.slice(0, 5)}...${contract_address.slice(45, )}` 
+              : "Загрузка..."
+              }
+          </div>
           <hr />
 
-          <b>Contract Owner:</b>
-          <div className="Hint">{owner?.toString().slice(0, 5)+"..."+owner?.toString().slice(20, )}</div> 
+          <b>Владелец контракта:</b>
+          <div className="Hint">
+            {owner ?
+              `${owner.toString().slice(0, 5)}...${owner.toString().slice(45, )}`  
+              : "Загрузка..."
+            }
+            </div> 
           <hr />
 
           {contract_balance && (
             <>
-              <b>Contract Balance:</b>
+              <b>Баланс контракта:</b>
               <div className="Hint">{fromNano(contract_balance)  ?? "Loading..."}</div>
               <hr />
             </>
@@ -42,35 +52,40 @@ function App() {
 
           {recent_sender && (
             <>
-              <b>Recent sender:</b>
-              <div className="Hint">{recent_sender?.toString().slice(0, 5)+"..."+recent_sender?.toString().slice(20, )}</div>
+              <b>Последний отправитель:</b>
+              <div className="Hint">{recent_sender ?
+                  `${recent_sender.toString().slice(0,5)}...${recent_sender.toString().slice(45, )}}`
+                  : `Загрузка...`
+                }
+                
+              </div>
               <hr />
             </>
           )}
 
           <>
-            <b>Counter Value:</b>
+            <b>Значение счетчика:</b>
             <div>{counter ?? "Loading..."}</div>
           </>
         </div>
         <div>
-          <h3>Contract actions: </h3>
+          <h3>Действия: </h3>
           {connected ? (
             <>
-              <p>Increment contract balance by 1 TON, with 0.05 TON as a comission</p>
-              <button onClick={sendIncrement}>Increment</button>
+              <p>Увеличить счетчик на 1 за 0.05 TON в качестве комиссии</p>
+              <button onClick={sendIncrement}>Увеличить</button>
               <hr />
 
-              <p>Withdraw the TON from contract</p>
-              <button onClick={widthdrawCoins}>Withdraw 1 TON</button>
+              <p>Вывести TON из контракта</p>
+              <button onClick={widthdrawCoins}>Вывести 1 TON</button>
               <hr />
               
-              <p>Withdraw the TON from contract</p>
-              <button onClick={sendDeposit}>Deposit 1 TON</button>
+              <p>Внести TON в контракт</p>
+              <button onClick={sendDeposit}>Внести 1 TON</button>
               <hr />
             </>
           ) : (
-            <p>Connect wallet to start action</p>
+            <p>Подключите кошелек, что бы увидеть действия</p>
           )}
         </div>
         <div>
