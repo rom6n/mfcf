@@ -9,8 +9,8 @@ function App() {
   const {
     contract_address,
     counter,
-    recent_sender,
-    owner,
+    //recent_sender,
+    //owner,
     contract_balance,
     sendIncrement,
     widthdrawCoins,
@@ -40,7 +40,7 @@ function App() {
 
         <div className='Card'>
           <b>Counter Value</b>
-          <div>{counter_value ?? "Loading..."}</div>
+          <div>{counter ?? "Loading..."}</div>
         </div>
 
         <a
