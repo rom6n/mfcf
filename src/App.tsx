@@ -33,7 +33,7 @@ function App() {
           </div>
           <hr />
 
-          <b>Владелец контракта:</b>
+          <b>Владелец контракта:</b> 
           <div className="Hint">
             {owner ?
               `${owner.toString().slice(0, 5)}...${owner.toString().slice(45, )}`  
