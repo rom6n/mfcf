@@ -17,6 +17,32 @@ function App() {
   } = useMainContract();
   const { connected } = useTonConnect();
 
+  let recent_sender_str = "Загрузка...";
+  if (recent_sender) {
+    recent_sender_str = `${recent_sender.toString().slice(0, 5)}.....${recent_sender.toString().slice(43, )}`;
+  }
+
+  let recent_counter_str = "Загрузка...";
+  if (counter) {
+    recent_counter_str = `${counter}`;
+  }
+
+  let owner_str = "Загрузка...";
+  if (owner) {
+    owner_str = `${owner}`;
+  }
+
+  let balance_str = "Загрузка...";
+  if (contract_balance) {
+    balance_str = `${contract_balance}`;
+  }
+
+  let contract_address_str = "Загрузка...";
+  if (contract_address) {
+    contract_address_str = `${contract_address}`;
+  }
+
+
   return (
     <div>
       <TonConnectButton />
@@ -26,43 +52,31 @@ function App() {
           <h3>Данные контракта:</h3>
           <b>Адресс контракта:</b>
           <div className="Hint">
-            {contract_address ?
-              `${contract_address.slice(0, 5)}.....${contract_address.slice(43, )}` 
-              : "Загрузка..." 
-              }
+            {contract_address_str}
           </div>
           <hr />
 
           <b>Владелец контракта:</b> 
           <div className="Hint">
-            {owner ?
-              `${owner.toString().slice(0, 5)}.....${owner.toString().slice(43, )}`  
-              : "Загрузка..."
-            }
+            {owner_str}
             </div> 
           <hr />
 
           <b>Баланс контракта:</b> 
           <div className="Hint">
-            {contract_balance ?
-              `${fromNano(contract_balance)}`  
-              : "Загрузка..."
-            }
+            {balance_str}
             </div> 
           <hr />
 
           <b>Последний отправитель:</b> 
           <div className="Hint">
-            {recent_sender ?
-              `${recent_sender.toString().slice(0, 5)}.....${recent_sender.toString().slice(43, )}`  
-              : "Загрузка..."
-            }
+            {recent_sender_str}
             </div> 
           <hr />
 
           <>
             <b>Значение счетчика:</b>
-            <div>{counter ?? "Загрузка..."}</div>
+            <div>{recent_counter_str}</div>
           </>
         </div>
         <div>
