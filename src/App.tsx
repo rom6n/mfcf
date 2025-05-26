@@ -27,7 +27,7 @@ function App() {
           <b>Адресс контракта:</b>
           <div className="Hint">
             {contract_address ?
-              `${contract_address.slice(0, 5)}.....${contract_address.slice(42, )}` 
+              `${contract_address.slice(0, 5)}.....${contract_address.slice(43, )}` 
               : "Загрузка..." 
               }
           </div>
@@ -36,32 +36,29 @@ function App() {
           <b>Владелец контракта:</b> 
           <div className="Hint">
             {owner ?
-              `${owner.toString().slice(0, 5)}.....${owner.toString().slice(42, )}`  
+              `${owner.toString().slice(0, 5)}.....${owner.toString().slice(43, )}`  
               : "Загрузка..."
             }
             </div> 
           <hr />
 
-          {contract_balance && (
-            <>
-              <b>Баланс контракта:</b>
-              <div className="Hint">{fromNano(contract_balance)  ?? "Loading..."}</div>
-              <hr />
-            </>
-          )}
+          <b>Баланс контракта:</b> 
+          <div className="Hint">
+            {contract_balance ?
+              `${contract_balance.toString().slice(0, 5)}.....${contract_balance.toString().slice(43, )}`  
+              : "Загрузка..."
+            }
+            </div> 
+          <hr />
 
-          {recent_sender && (
-            <>
-              <b>Последний отправитель:</b>
-              <div className="Hint">{recent_sender ?
-                  `${recent_sender.toString().slice(0,5)}.....${recent_sender.toString().slice(42, )}`
-                  : `Загрузка...`
-                }
-                
-              </div>
-              <hr />
-            </>
-          )}
+          <b>Последний отправитель:</b> 
+          <div className="Hint">
+            {recent_sender ?
+              `${recent_sender.toString().slice(0, 5)}.....${recent_sender.toString().slice(43, )}`  
+              : "Загрузка..."
+            }
+            </div> 
+          <hr />
 
           <>
             <b>Значение счетчика:</b>
@@ -72,7 +69,7 @@ function App() {
           <h3>Действия: </h3>
           {connected ? (
             <>
-              <p>Увеличить счетчик на 1 за 0.05 TON в качестве комиссии</p>
+              <p>Увеличить счетчик на 1 за 0.05 TON</p>
               <button onClick={sendIncrement}>Увеличить</button>
               <hr />
 
@@ -85,7 +82,7 @@ function App() {
               <hr />
             </>
           ) : (
-            <p>Подключите кошелек, что бы увидеть действия c контрактом</p>
+            <p>Подключите кошелек, что бы увидеть действия</p>
           )}
         </div>
         <div>
