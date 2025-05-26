@@ -25,16 +25,16 @@ function App() {
         <div>
           <h3>Contract Data:</h3>
           <b>Our contract Address:</b>
-          <div className="Hint">{contract_address  ?? "Loading..."}</div>
+          <div className="Hint">{contract_address?.slice(0, 5)+"..."+contract_address?.slice(20, )}</div>
           <hr />
 
-          <b>Our contract Owner:</b>
-          <div className="Hint">{owner?.toString().slice(0, 5)+"..."+owner?.toString().slice(20, )}</div>
+          <b>Contract Owner:</b>
+          <div className="Hint">{owner?.toString().slice(0, 5)+"..."+owner?.toString().slice(20, )}</div> 
           <hr />
 
           {contract_balance && (
             <>
-              <b>Our contract Balance:</b>
+              <b>Contract Balance:</b>
               <div className="Hint">{fromNano(contract_balance)  ?? "Loading..."}</div>
               <hr />
             </>
