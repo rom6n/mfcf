@@ -27,7 +27,7 @@ function App() {
           <b>Адресс контракта:</b>
           <div className="Hint">
             {contract_address ?
-              `${contract_address.slice(0, 5)}...${contract_address.slice(45, )}` 
+              `${contract_address.slice(0, 5)}.....${contract_address.slice(42, )}` 
               : "Загрузка..." 
               }
           </div>
@@ -36,7 +36,7 @@ function App() {
           <b>Владелец контракта:</b> 
           <div className="Hint">
             {owner ?
-              `${owner.toString().slice(0, 5)}...${owner.toString().slice(45, )}`  
+              `${owner.toString().slice(0, 5)}.....${owner.toString().slice(42, )}`  
               : "Загрузка..."
             }
             </div> 
@@ -54,7 +54,7 @@ function App() {
             <>
               <b>Последний отправитель:</b>
               <div className="Hint">{recent_sender ?
-                  `${recent_sender.toString().slice(0,5)}...${recent_sender.toString().slice(45, )}}`
+                  `${recent_sender.toString().slice(0,5)}.....${recent_sender.toString().slice(42, )}`
                   : `Загрузка...`
                 }
                 
