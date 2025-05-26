@@ -29,7 +29,7 @@ function App() {
           <hr />
 
           <b>Our contract Owner:</b>
-          <div className="Hint">{owner?.toString()  ?? "Loading..."}</div>
+          <div className="Hint">{owner?.toString().slice(0, 5)+"..."+owner?.toString().slice(20, )}</div>
           <hr />
 
           {contract_balance && (
@@ -43,7 +43,7 @@ function App() {
           {recent_sender && (
             <>
               <b>Recent sender:</b>
-              <div className="Hint">{recent_sender.toString()  ?? "Loading..."}</div>
+              <div className="Hint">{recent_sender?.toString().slice(0, 5)+"..."+recent_sender?.toString().slice(20, )}</div>
               <hr />
             </>
           )}
