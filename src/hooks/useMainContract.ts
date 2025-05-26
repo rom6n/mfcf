@@ -60,7 +60,7 @@ export function useMainContract() {
     widthdrawCoins: async () => {
         return await mainContract?.sendWithdrawalRequest(toNano("0.05"), toNano("1"), sender);
     },
-    sendDiposit: async () => {
+    sendDeposit: async () => {
         mainContract?.sendDeposit(toNano("1"), sender);
     },
     ...contractData,

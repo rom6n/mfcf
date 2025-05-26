@@ -12,9 +12,8 @@ function App() {
     owner,
     contract_balance,
     sendIncrement,
-    //sendDeposit,
     widthdrawCoins,
-    sendDiposit,
+    sendDeposit,
   } = useMainContract();
   const { connected } = useTonConnect();
 
@@ -67,7 +66,7 @@ function App() {
               <hr />
               
               <p>Withdraw the TON from contract</p>
-              <button onClick={sendDiposit}>Diposit 1 TON</button>
+              <button onClick={sendDeposit}>Deposit 1 TON</button>
               <hr />
             </>
           ) : (
@@ -76,13 +75,13 @@ function App() {
         </div>
         <div>
           <a
-            href="https://testnet.tonscan.org/address/EQDAbnsqALKAoQO5uS1qOI8X7OhkeDnv3hZiqg2VAqhPa6xN"
+            href="https://testnet.tonscan.org/address/EQBnodt3mWVa3p3hKj4f_5f6Sx2XSz6ihqrzlCRpsY97SItk"
             target="_blank"
           >
             explorer
           </a>
           <br />
-          <a href="https://github.com/evilcore29/TONStepik_FE/tree/lesson-5.4" target="_blank">
+          <a href="https://github.com/rom6n" target="_blank">
             github
           </a>
         </div>
